@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <h2 style="color: #1da85b;" align="center"><u>Edit Student Data</u></h2>
+        <div align="center">
+        <form action="update_student/{{thestudent['rollno']}}" method="post">
+          <fieldset style="width: 500;">
+            <legend>Edit Student data here</legend>
+            <table style="color: #9a1fa5;" cellspacing="5" cellpadding="5">
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input id="name" type="text" name="name" value="{{thestudent['name']}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="branch">Branch: </label></td>
+                    <td><input id="branch" type="text" name="branch" value="{{thestudent['branch']}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input id="email" type="text" name="email" value="{{thestudent['email']}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="phoneno">Phone Number: </label></td>
+                    <td><input id="phone" type="text" name="phone" value="{{thestudent['phone']}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth: </label></td>
+                    <td><input id="dob" type="date" name="dob" 
+                        value="{{thestudent['dob']}}"></td>
+                </tr>
+                <tr align="left">
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Update"/>
+                        <a href="../"><input type="button" value="Cancel"/></a>
+                    </td>
+                </tr>
+            </table>
+            </fieldset>
+        </form>
+        </div>
+        </body>
+        </body>
+    </body>
+</html>
