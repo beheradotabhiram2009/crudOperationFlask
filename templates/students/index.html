@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            .evenrow{ background-color:bisque; }
+            .oddrow { background-color: rgb(222, 217, 217); }
+        </style>
+    </head>
+    <body>
+    <div align="center">
+    <table cellspacing="0" cellpadding="10" border="0">
+        <thead><h2 style="color: #1da85b;"><u>Student List</u></h2></thead>
+        <thead align="left"><th ><a href="./student_entry" ><input type="button" value="Add Student" /></a></th></thead>
+        <thead style="background-color: rgb(92, 67, 139); color: #f7f8f9;">
+            <tr>
+                <th scope="col">Roll No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Branch</th>
+                <th scope="col">phone</th>
+                <th scope="col">email</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        {% for info in rows %} 
+        <tr class="{{ loop.cycle('oddrow', 'evenrow') }}">
+            <td>  {{info["rollno"]}} </td>
+            <td>  {{info["name"]}}   </td>
+            <td>  {{info["branch"]}} </td>
+            <td>  {{info["phone"]}}  </td>
+            <td>  {{info["email"]}}  </td>
+            <td>  {{info["dob"]}}  </td>
+            <td><a href="./edit_student/{{info['rollno']}}"><input type="button" value="Edit"/></a></td>
+            <td><a href="./delete_student/{{info['rollno']}}"><input type="button" value="Delete"/></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    </body>
+</html>
