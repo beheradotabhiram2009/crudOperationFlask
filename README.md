@@ -30,6 +30,9 @@ def hello():
     data = "3214"
     context = {'data':data, 'funda':funda}
     return render_template("index.html", context=context)
+
+if __name__=='__main__': 
+   app.run(debug=True) 
 ```
 ### Create templates folder under project folder and create a file  index.html under template folder with following code
 ```
